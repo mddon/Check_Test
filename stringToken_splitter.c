@@ -11,7 +11,7 @@
 char **split_line(char *line)
 {
 	int bufferSize = 64;
-	int k_loop = 0; 
+	int k_loop = 0;
 	char **tokens = malloc(bufferSize * sizeof(char *));
 	char *token;
 
@@ -38,7 +38,7 @@ char **split_line(char *line)
 		if (k_loop >= bufferSize)
 		{
 			bufferSize += bufferSize; /*Double the buffer size*/
-			tokens = realloc(tokens, bufferSize * sizeof(char *)); /*Reallocate memory for tokens*/
+			tokens = realloc(tokens, bufferSize * sizeof(char *));
 			if (!tokens)
 			{
 				fprintf(stderr, "Error: Reallocation error in split_line: tokens\n");
@@ -51,5 +51,5 @@ char **split_line(char *line)
 
 	tokens[k_loop] = NULL;
 
-	return tokens; /*Return the dynamically allocated array of tokens*/
+	return (tokens); /*Return the dynamically allocated array of tokens*/
 }

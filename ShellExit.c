@@ -12,11 +12,11 @@ int own_exit(char **args)
 {
 	if (args[1])
 	{
-		return atoi(args[1]);
+		return (atoi(args[1]));
 	}
 	/* If no exit status is provided, return 0 for successful termination. */
 	else
 	{
-		return 0;
+		return (0);
 	}
 }
